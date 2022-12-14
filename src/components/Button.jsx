@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Button = ({addComponent,text}) => {
+function Button({addList,name}) {
   return (
-    <button className='AddButton' onClick={addComponent}>{text}</button>
+    <>
+        <button onClick={addList}>{name}</button>
+    </>
   )
 }
 

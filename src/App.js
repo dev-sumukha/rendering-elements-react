@@ -4,19 +4,17 @@ import ListComponent from './components/ListComponent';
 import './App.css'
 
 function App() {
-  const [component,setComponent] = useState(["sample component"]);
-
-  function addComponent(){
-    setComponent([...component,"sample component"]);
+  const [content,setContent] = useState([]);
+  function addList(){
+    setContent([...content,"Your List item"]);
   }
-
   return(
     <>
       <div className='App'>
-        <Button addComponent={addComponent} text="call component"/>
-        <ListComponent text="sample Component"/>
-        {component.map((item)=>(<ListComponent text={item}/>))}
-
+        <Button addList = {addList} name="Add"/>
+        {content.map((item)=>{
+          return <ListComponent/>
+        })}
       </div>
     </>
   )

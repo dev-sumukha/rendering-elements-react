@@ -1,10 +1,10 @@
 import React from 'react'
 
-const ListComponent = (props) => {
+function ListComponent() {
   return (
-    <div>
-        <h1>{props.text}</h1>
-    </div>
+    <>
+        <h1>Your List item</h1>
+    </>
   )
 }
 
